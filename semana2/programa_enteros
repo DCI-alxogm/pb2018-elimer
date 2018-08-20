@@ -1,0 +1,16 @@
+/*Creado el 15 de agosto del 2018 por Elizabeth Mercado */
+
+#include<stdio.h>
+
+int main()
+{
+int a,b,c,d,e;
+	printf("El numero a es:\n");
+	scanf("%i",&a);
+	printf("El numero b es:\n");
+	scanf("%i",&b);
+return0;
+}
+
+
+
