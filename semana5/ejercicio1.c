@@ -8,12 +8,18 @@ int main()
 	float inicial,final,delta;
 	int  n,i,o;
 	int op=1,count=0;
-
-	
- printf("Escribe un valor para la temperatura inicia");
-          scanf("%f",&inicial);
+	n=4;
+printf("Escribe un valor para la temperatura inicial");
+scanf("%f",&inicial);
 printf("escribe un valor para la tempratura final");
 scanf("%f", &final);
+
+printf("Escribe un valor para la temperatura C \n");
+scanf("%i",&temp_C);
+
+printf("Escribe un valor para la temperatura K\n");
+scanf("%i",&temp_K);
+
 
 while(op==1){	
                count ++;     //count= count+1;     
@@ -21,7 +27,10 @@ while(op==1){
 	delta=(final-inicial)/n;
 
 	for(i=0;i<n;i++){
-		temp_K=temp_C+273.15;
+
+	
+	
+	temp_K=temp_C+273.15;
 		printf("%f %f\n",temp_C,temp_K);
 		temp_C=temp_C+delta;      //  temp_C+=delta;
 }
@@ -32,6 +41,7 @@ while(op==1){
 printf("Error:número de intentos excedido");
 return 1;
 }
+
 }
 return 0;
 }
