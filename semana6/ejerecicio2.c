@@ -4,7 +4,12 @@
 #include<math.h>
 
 int main(){
+	FILE *informacion;
+	FILE *resultado;
 	int n=10;
+
+	informacion = fopen("informacion.txt","r");
+	fscanf(informacion,"%i", &n);
 	int edad[n],sexo[n],semestre[n],calificacion[n];
 	int m=0,h=0,sex=0;
 	int s1=0,s2=0,s3=0,s4=0,s5=0,s6=0,s7=0,s8=0,s9=0;
@@ -12,6 +17,8 @@ int main(){
 	float prom=0;
 	
 	for(i=1;i<=10;i++){
+fscanf(informacion, "%f %f %f %f",&semestre[i], &edad[i], &sexo[i], &calificacion[i]);
+fclose(informacion);
 	printf("Escribe la edad del estudiante %i \n", i);
 	scanf("%i",&edad[i]);
 	
@@ -62,12 +69,17 @@ int main(){
 
 		prom=(prom+calificacion[i]);
 	}
+resultado=fopen("resultado", "w");
+fprintf(resultado, "Se introdujeron %i alumnos. De los obtenidos:\n %f son hombres\n %f son mujeres\n",n,h,m);
+
+
 prom=prom/n;
-printf("Mujeres=%i,hombres=%i\n",m,h);
-printf("Estudiantes de semestre: 1=%i, 2=%i, 3=%i, 4=%i, 5=%i, 6=%i, 7=%i, 8=%i\n",s1,s2,s3,s4,s5,s6,s7,s8);
-printf("El promedio de alumnos= %f\n",prom);
+fprintf(resultado,"Mujeres=%i,hombres=%i\n",m,h);
+fprintf(resultado,"Estudiantes de semestre: 1=%i, 2=%i, 3=%i, 4=%i, 5=%i, 6=%i, 7=%i, 8=%i\n",s1,s2,s3,s4,s5,s6,s7,s8);
+fprintf(resultado,"El promedio de alumnos= %f\n",prom);
+
+fclose(resultado);
 
 return 0;
 }
-	
 	
