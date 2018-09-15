@@ -1,0 +1,4 @@
+#El funcionamiento de los códigos aplicados en el primer programa con nombre "límites"es realizar una operación que al introducir tu edaad actual te de como resultado la edad que tendras dentro de 10 años, en este programa usamos la libreria int ya que manejamos puros enteros.
+#El codigo de el segundo programa es intoducir unas operaciones y al meter 4 números enteros estos den los resultados de las operaciones indicadas dentro del programa, en este programa sole te dara números enteros.
+#El codigo de el tercer ejercicio es con la libreria de flotantes que al introducir cualquier número dentro de las operaciones dadas en el programa, este te arroje los resultados pero en números decimales.
+#La diferencia que existe entre el programa 2 y el 3 son los resultados arrojados, aunque sean las mismas operaciones te daran diferentes resultados ya que en una te da decimanles y en la otro unicamente enteros.

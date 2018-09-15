@@ -1,0 +1,2 @@
+Esta semana tarbajamos con los arreglos para poder declarar el tipo de variables que usamos, en el programa de esta semana usamos un arreglo para definir la cantidad de alumnos que queriamos contar, sus edades, el semestre en el que estaban cursando, su sexo y sus calificaciones.Al final del programa este tenia la capacidad de darte un resumen de los datos capturados por el usuario.
+En los programas dos y tres utilizamos las funciones para leer,escrbir y cerrar un archivo definido y ya creado.  
