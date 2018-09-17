@@ -5,7 +5,7 @@
 int main(){
 	FILE *archivo;
 	FILE *resultado;
-	int n=10;
+	int n;
 
 	archivo=fopen("info.txt","r");
 	fscanf(archivo,"%i",&n);
@@ -18,21 +18,10 @@ int main(){
 	for(i=1;i<=10;i++){
 	
 
-	printf("Escribe la edad del estudiante %i \n", i);
-	scanf("%i",&edad[i]);
-	
-        printf("Escribe 1 si eres mujer y 0 si eres hombre\n");
-        scanf("%i",&sexo[i]);
-	
-	printf("Escribe el semestre al que perteneces\n");
-	scanf("%i",&semestre[i]);
-	
-	printf("Escribe la calificacion del estudiante\n");
-	scanf("%i", &calificacion[i]);
+	printf("Escribe la informacion del estudiante: Edad,sexo,semestre,calificación %i \n", i);
+	scanf("%i %i %i %i",&edad[i],&sexo[i],&semestre[i],&calificacion[i]);
+		
 
-	fscanf(archivo,"%f %f %f %f\n",&semestre[i], &edad[i], &sexo[i], &calificacion[i]);
-        fclose(archivo);
-	
 	if(sexo[i]==1)
 		m++;
 	
@@ -64,18 +53,19 @@ int main(){
 	
 	else if(semestre[i]==8)
 		s8++;
-	
+
+	 prom=(prom+calificacion[i]);
+
+	 fscanf(archivo,"%f %f %f %f\n",&semestre[i], &edad[i], &sexo[i], &calificacion[i]);
+        fclose(archivo);
 
 	
-
-
-		prom=(prom+calificacion[i]);
 	}
 		
 	prom=prom/n;
 
 	resultado=fopen("resultado.txt", "w");
-        fprintf(resultado, "Se introdujeron %i alumnos. De los obtenidos:\n %f son hombres\n %f son mujeres\n",n,h,m);
+        fprintf(resultado,"Se introdujeron %i alumnos. De los obtenidos:\n %f son hombres\n %f son mujeres\n",h,m);
 	fprintf(resultado,"Mujeres=%i,hombres=%i\n",m,h);
 	fprintf(resultado,"Estudiantes de semestre: 1=%i, 2=%i, 3=%i, 4=%i, 5=%i, 6=%i, 7=%i, 8=%i\n",s1,s2,s3,s4,s5,s6,s7,s8);
 	fprintf(resultado,"El promedio de alumnos= %f\n",prom);
