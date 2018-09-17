@@ -36,7 +36,7 @@ for(e=0;e<=n;e++)
      printf("El coseno del número escrito es:%f \n", cs);
      printf("La raíz del número escrito es: %f \n", raiz);
 }
-pirintf("si quieres realizar otra conversion escribe 1 \n");
+printf("Si quieres realizar otra conversion escribe 1 \n");
 scanf("%i",&again);
 }
 return 0;
