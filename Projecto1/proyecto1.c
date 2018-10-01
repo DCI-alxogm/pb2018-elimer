@@ -4,7 +4,7 @@
 int main(){
 //Se introducen las variables
 float G=39.478417,h,masap,masasol;
-int n=100000,i,j;
+int n=10000,i,j;
 double x0,y0,z0,vx0,vy0,vz0;
 double x[n],y[n],z[n],vx[n],vy[n],vz[n],r;
 FILE *datos;
