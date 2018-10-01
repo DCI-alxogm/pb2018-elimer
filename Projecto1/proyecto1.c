@@ -3,8 +3,8 @@
 
 int main(){
 //Se introducen las variables
-float G=39.4784176,h,masap,masasol ;
-int n=1000,i,j;
+float G=39.478417,h,masap,masasol;
+int n=100000,i,j;
 double x0,y0,z0,vx0,vy0,vz0;
 double x[n],y[n],z[n],vx[n],vy[n],vz[n],r;
 FILE *datos;
@@ -33,7 +33,7 @@ vz[0]=vz0*365.242;
 
 resultados=fopen("resultadosmercurio.txt","w");
 //Se introducen las ecuaciones con las variables indicadas.
-for(i=1;i<n;i++)
+for(i=1;i<=n;i++)
 {
 	 x[i]=x[i-1]+vx[i-1]*h;
 	y[i]=y[i-1]+vy[i-1]*h;
@@ -69,7 +69,7 @@ vz[0]=vz0*365.242;
 
 resultados=fopen("resultadosvenus.txt","w");
 
-for(i=1;i<n;i++)
+for(i=1;i<=n;i++)
 {
    	 x[i]=x[i-1]+vx[i-1]*h;
 	y[i]=y[i-1]+vy[i-1]*h;
@@ -103,7 +103,7 @@ datos=fopen("tierra.txt","r");
 	vz[0]=vz0*365.242;
 
 resultados=fopen("resultadostierra.txt","w");
-for(i=1;i<n;i++){
+for(i=1;i<=n;i++){
         x[i]=x[i-1]+vx[i-1]*h;
         y[i]=y[i-1]+vy[i-1]*h;
         z[i]=z[i-1]+vz[i-1]*h;
