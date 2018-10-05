@@ -1,0 +1,1 @@
+Esta semana realizamos ejemplos de apuntadores y sobre como usarlos, estos apuntadores son usados para acceder a la memoria y poder manipularla, con los apuntadores es mas facil que usar tantas variables.
