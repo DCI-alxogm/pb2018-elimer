@@ -5,23 +5,38 @@
 
 int main(){
 FILE *datos;
-int i,*ptr,num,o;
-char var[255];
+int i,num,o;
+float var1,var2,var3;
+num = 0;
 
 printf("El programa siguiente calcula el numero mayor que existe en un archivo");
 printf("Escribe el numero de datos que existen en tu archivo: ");
-scanf("%i",&num);
-ptr= (int*)malloc(num*sizeof(int)); //memoria reservada
-
+scanf("%d",&num);
+float *ptr= (float*)malloc(num*sizeof(float));
 
 datos=fopen("num_maximo.txt","r");
-o=1;
-while (o==1){
-fgets(var,255,(FILE*)datos);
+for (i=0;i<num;i++){
+	fscanf(datos,"%f\n",&ptr[i]);
 
+if (i==1){
+	var1=ptr[i-1];
+	var2=ptr[i];
+if(var2<=var1)
+	var3=var1;
+else 
+	var3=var2;
+}
+if(i>1)
+	var2=ptr[i];
+if(var3<var2)
+	var3=var2;
+else
+	var3=var3;
+}
 fclose(datos);
-printf("El numero mayor en el archivo es: %f\n",);
 
+printf("El numero mayor en el archivo es: %f\n",var3);
+free(ptr);
 return 0;
 }
 
