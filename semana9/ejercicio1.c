@@ -15,10 +15,10 @@ scanf("%d",&num);
 float *ptr= (float*)malloc(num*sizeof(float));
 
 datos=fopen("num_maximo.txt","r");
-for (i=0;i<num;i++){
+for (i=0;i<num;i++){ //ciclo for para todos los if
 	fscanf(datos,"%f\n",&ptr[i]);
 
-if (i==1){
+if (i==1){  //if para los numeros 0 y 1
 	var1=ptr[i-1];
 	var2=ptr[i];
 if(var2<=var1)
@@ -26,7 +26,7 @@ if(var2<=var1)
 else 
 	var3=var2;
 }
-if(i>1)
+if(i>1) //if para todos los demas datos
 	var2=ptr[i];
 if(var3<var2)
 	var3=var2;
