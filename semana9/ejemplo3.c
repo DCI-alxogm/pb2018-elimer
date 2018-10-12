@@ -4,10 +4,12 @@
 
 void cuadrado(float x); //con argumentos de entrada y sin argumentos de salida
 int main(){
-	float a,xx;
-	cuadrado(a);
+	float a;
+	printf("Introduce un numero: \n");
 	scanf("%f",&a);
-	printf("El cuadrado de %f es %f\n",a,xx);
+	cuadrado(a);
+	
+	//printf("El cuadrado de %f es %f\n",a,xx);
 	return 0;
 }
 void cuadrado(float x){
@@ -15,6 +17,6 @@ void cuadrado(float x){
 	//printf("Introduce un número\n");
 	//scanf("%f",&x);
 	x2=x*x;
-	//printf("El cuadrado de %f es %f\n",x,x2);
+	printf("El cuadrado de %f es %f\n",x,x2);
 	//return x2;
 }
