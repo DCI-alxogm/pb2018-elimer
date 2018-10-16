@@ -7,12 +7,12 @@ int main(int argc, char *argv[]){
 	printf("El nombre del archivo que estas ejecutando es: %s\n",argv[0]);
 	char *nombre_archivo;
 	float xi,xf,yi,yf,zi,zf,h;
-	float x[num],y[num],z[num];
-	int i,num;
+	int i,num=0;
+	float *x = (float*)malloc(num*sizeof(float));
+	float *y = (float*)malloc(num*sizeof(float));
+	float *z = (float*)malloc(num*sizeof(float));
 	FILE *fp;
 
-	printf("Escribe el numero de datos que quieres que se genere: \n");
-	scanf("%i",num);
 	if(argc==4){
 		nombre_archivo=argv[1];
 		num=atoi(argv[2]);
@@ -20,19 +20,20 @@ int main(int argc, char *argv[]){
 		
 		printf("El nombre del archivo a abrir es: %s\n",nombre_archivo);
 		printf("Escribe los valores de xi,yi,zi: \n");
-		scanf("%f",&xi);
-		printf("Escribe los valores de xf,yf,zf: \n");
-		scanf("%f",&xf);
-		yi=xi;
-		yf=xf;
-		zi=xi;
-		zf=xf;
+		scanf("%f",&x[0]);
+		//printf("Escribe los valores de xf,yf,zf: \n");
+		//scanf("%f",&xf[num]);
+		y[0]=x[0];
+		z[0]=x[0];
+		printf("Abrir");
 		fp=fopen(nombre_archivo,"w+");
-		fprintf(fp,"x: %f, \t y: %f, \t  z: %f, \t  N: %i",xi,yi,zi,num);
+		
 		//Aqui se pondria todo lo demas que se quiere hacer y/o escribir un archivo..
-	for(i=0,i=num,i++){
-		xi=x[i];
-		xf;
+	for(i=1;i<num;i++){
+		x[i]=(float)i;
+		y[i]=x[i];
+		z[i]=x[i];
+		fprintf(fp,"%d \t x: %f, \t y: %f, \t  z: %f, \n",i,x[i],y[i],z[i]);
 	}
 		fclose(fp);
 	}
