@@ -2,17 +2,19 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 
-
-void funcion();
+//void funcion();
 //void datos(float left,float right,float up, float down, int n);
 
 //se crea otra funcion donde se van a realizar todas las operaciones del programa
 void funcion(){
-	float e,w;
-	int N,n=0,i,j;
+	float e,w=1;
+	int N,n=0,i,j,plus;
 	float left,right,up,down,help,t;
+	char num[25];
+
 
 	FILE *first;
 	FILE *results;
@@ -21,42 +23,42 @@ void funcion(){
 //leer del archivo la temperatura de los bordes,numero de puntos a usar en la aproximación,
 first=fopen("datos.txt","r");
 fscanf(first,"%f %f %f %f %f %i",&left,&right,&up,&down,&e,&n);
-
 fclose(first);
 
+//T es la matriz
 
-
-double **T= (double**)malloc(n*sizeof(float*));
-for(i=0;i<n;i++){
-	T[i]=(double*)malloc(n*sizeof(float));
-	}	
+double **T = (double**)malloc(n*sizeof(int*));
+for(i=1;i<=n;i++){
+	T[i]=(double*)malloc(n*sizeof(int));
+}	
 
 
 in=fopen("inicial.txt","w");
-for(i=0;i<n;i++){
-		for(j=0;j<n;j++){
-		if(i=0)
-		T[i][j]=left;
-		else if(i=n)
-		T[i][j]=right;
-		else if(j=0)
-		T[i][j]=up;
-		else if(j=n)
-		T[i][j]=down;
-		else
-		T[i][j]=0;
-
-	}
-	fprintf(in,"%lf",T[i][j]);
-}
+for(i=1;i<=n;i++){
+		for(j=1;j<=n;j++){
+			if(i=1)
+			T[i][j]=left;
+			else if(i=n)
+			T[i][j]=right;
+			else if(j=1)
+			T[i][j]=up;
+			else if(j=n)
+			T[i][j]=down;
+			else
+			T[i][j]=0;
+			fprintf(in,"%lf",T[i][j]);
+			}
+		fprintf(in,"\n");
+		}
 fclose(in);
-w=1;
 N=n*n;
-//datos(left,right,up,down,n,T);
-while(w>e){
-	
-results=fopen("resultados.txt","w");
 
+
+while(fabs(w)>=e){//fabs sirve para el error minimo	
+	if(plus%25==0){
+		sprintf(num,"%i.ods",n);
+		results=fopen("resultados.txt","w");
+		}
 
 	for(i=1;i<=n-1;i++)
 	{
@@ -74,31 +76,25 @@ results=fopen("resultados.txt","w");
 
 		}	
 	}
-fprintf(results,"%lf",T[i][j]);
 
-	
-fclose(results);
-}
+	for(i=1;i<=n-1;i++)
+        {
+                        for(j=1;j<=n-1;j++)
+                        {
+				if(plus%25==0){
+					fprintf(results,"%f",T[i][j]);
+					}
+			}
+			if(plus%25==0){
+                                   fprintf(results,"\n");
+				}
+			}		
+		plus++;
+		if(plus%25==0){
+		N++;
+		}
+	fclose(results);
+	}
 
 free(T);
 }
-
-//Segunda funcion donde se meteran y leeran los datos iniciales dados en el archivo  de texto y sirve para determinar la temperatura solo en las orillas de la placa
-//void datos(float left,float right,float up, float down, int n){
-//int i,j;
-//float T[N][N];
-/*for(i=0;i<n;i++){
-		for(j=0;j<n;j++){
-		if(i=0)
-		T[i][j]=left;
-		else if(i=n)
-		T[i][j]=right;
-		else if(j=0)
-		T[i][j]=up;
-		else if(j=n)
-		T[i][j]=down;
-		else
-		T[i][j]=0;
-	}
-}*/
-
