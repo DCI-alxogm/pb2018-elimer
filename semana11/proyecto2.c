@@ -11,11 +11,11 @@
 //se crea otra funcion donde se van a realizar todas las operaciones del programa
 void funcion(){
 	float e,w=1;
-	int N,n=0,i,j,plus;
+	int N,n,i,j,plus;
 	float left,right,up,down,help,t;
-	char num[25];
+	//char num[25];
 
-
+printf("Entra la funcion");
 	FILE *first;
 	FILE *results;
 	FILE *in;	
@@ -27,38 +27,36 @@ fclose(first);
 
 //T es la matriz
 
-double **T = (double**)malloc(n*sizeof(int*));
-for(i=1;i<=n;i++){
-	T[i]=(double*)malloc(n*sizeof(int));
+double **T = (double**)malloc(n*sizeof(float*));
+for(i=0;i<n;i++){
+	T[i]=(double*)malloc(n*sizeof(float));
 }	
 
-
+/*
 in=fopen("inicial.txt","w");
-for(i=1;i<=n;i++){
-		for(j=1;j<=n;j++){
-			if(i=1)
+for(i=0;i<=n;i++){
+		for(j=0;j<=n;j++){
+			if(i=0)
 			T[i][j]=left;
-			else if(i=n)
+			else if(i=n-1)
 			T[i][j]=right;
-			else if(j=1)
+			else if(j=0)
 			T[i][j]=up;
-			else if(j=n)
+			else if(j=n-1)
 			T[i][j]=down;
 			else
 			T[i][j]=0;
 			fprintf(in,"%lf",T[i][j]);
 			}
-		fprintf(in,"\n");
 		}
 fclose(in);
+*/
 N=n*n;
 
+while(fabs(w)>e){//fabs sirve para dar el valor absoluto
 
-while(fabs(w)>=e){//fabs sirve para el error minimo	
-	if(plus%25==0){
-		sprintf(num,"%i.ods",n);
 		results=fopen("resultados.txt","w");
-		}
+	
 
 	for(i=1;i<=n-1;i++)
 	{
@@ -72,29 +70,15 @@ while(fabs(w)>=e){//fabs sirve para el error minimo
 					w=t;
 				}
 		
-//fprintf(results," %lf\n",T[i][j]);//
+fprintf(results," %lf\n",T[i][j]);//
 
 		}	
 	}
 
-	for(i=1;i<=n-1;i++)
-        {
-                        for(j=1;j<=n-1;j++)
-                        {
-				if(plus%25==0){
-					fprintf(results,"%f",T[i][j]);
-					}
-			}
-			if(plus%25==0){
-                                   fprintf(results,"\n");
-				}
-			}		
-		plus++;
-		if(plus%25==0){
-		N++;
-		}
+		
 	fclose(results);
 	}
 
 free(T);
+return ;
 }
