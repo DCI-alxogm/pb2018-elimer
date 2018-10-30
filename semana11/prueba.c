@@ -36,25 +36,25 @@ void funcion(){
 	}	
 
 	printf("Entra la funcion");
-	in=fopen("inicial.txt","w");
+	in=fopen("resultados.txt","w");
 	
 	for(i=0;i<n;i++){
 			for(j=0;j<n;j++){
 
 				if(i==0){
 				T[i][j]=left;
-				printf("%i %i",i,j);
+				//printf("%i %i",i,j);
 				}else if(i==(n-1)){
 				T[i][j]=right;
-				printf("%i %i",i,j);
+				//printf("%i %i",i,j);
 				}else if(j==0){
 				T[i][j]=up;
-				printf("%i %i",i,j);
+				//printf("%i %i",i,j);
 				}else if(j==(n-1)){
 				T[i][j]=down;
-				printf("%i %i",i,j);
+				//printf("%i %i",i,j);
 				}else{
-				T[i][j]=0;
+				T[i][j]=((T[i+1][j])+(T[i-1][j])+(T[i][j+1])+(T[i][j-1]))/4;
 
 			}fprintf(in,"%3.3lf \t",T[i][j]);
 			}

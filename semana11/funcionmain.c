@@ -4,7 +4,7 @@
 void funcion();
 
 int main(){
-        printf("Entrando");
+        //printf("Entrando");
 	funcion();
 	return 0;
 }
