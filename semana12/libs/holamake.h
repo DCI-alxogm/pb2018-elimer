@@ -1,0 +1,2 @@
+void printholamake();
+void raiz();
