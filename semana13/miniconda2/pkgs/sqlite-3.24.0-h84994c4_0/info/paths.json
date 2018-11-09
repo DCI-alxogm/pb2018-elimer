@@ -1,0 +1,63 @@
+{
+  "paths": [
+    {
+      "_path": "bin/sqlite3",
+      "path_type": "hardlink",
+      "sha256": "675a3312689fc57727503fa0323b5733529b17f13a1e61cc0ba8303229448432",
+      "size_in_bytes": 1317296
+    },
+    {
+      "_path": "include/sqlite3.h",
+      "path_type": "hardlink",
+      "sha256": "89192f125b3615dcad65a8ae091e1b8dd14e6b9e418225ab73646412a981a83c",
+      "size_in_bytes": 544160
+    },
+    {
+      "_path": "include/sqlite3ext.h",
+      "path_type": "hardlink",
+      "sha256": "b74c1a8f99b7f8cbb85a0eab134e9ddd60a538bacf412377fee3df95920631dc",
+      "size_in_bytes": 32989
+    },
+    {
+      "_path": "lib/libsqlite3.a",
+      "path_type": "hardlink",
+      "sha256": "3a81130b03fd603abcdadd62560c052cadb7a487484277e3c2b21d0a478925fa",
+      "size_in_bytes": 1419776
+    },
+    {
+      "_path": "lib/libsqlite3.la",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+      "sha256": "91f9a5c7890d29c345bc5bbe02ef353cd2f7616079fe0cf1695192334673d939",
+      "size_in_bytes": 1017
+    },
+    {
+      "_path": "lib/libsqlite3.so",
+      "path_type": "softlink",
+      "sha256": "f9492fb19f3989fb24dc9fc152e06b9211f96914edfecdd6191f5765dc372a57",
+      "size_in_bytes": 1169744
+    },
+    {
+      "_path": "lib/libsqlite3.so.0",
+      "path_type": "softlink",
+      "sha256": "f9492fb19f3989fb24dc9fc152e06b9211f96914edfecdd6191f5765dc372a57",
+      "size_in_bytes": 1169744
+    },
+    {
+      "_path": "lib/libsqlite3.so.0.8.6",
+      "path_type": "hardlink",
+      "sha256": "f9492fb19f3989fb24dc9fc152e06b9211f96914edfecdd6191f5765dc372a57",
+      "size_in_bytes": 1169744
+    },
+    {
+      "_path": "lib/pkgconfig/sqlite3.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/opt/anaconda1anaconda2anaconda3",
+      "sha256": "9e171213026904feb273e9ec2e8ce4c923735df7d5d685794bed2075d966fc3c",
+      "size_in_bytes": 304
+    }
+  ],
+  "paths_version": 1
+}

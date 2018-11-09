@@ -1,0 +1,61 @@
+# This file created by conda-build 3.10.9+36.gd10dbde.dirty
+# meta.yaml template originally from:
+# /home/rdonnelly/conda/aggregate/pycparser-feedstock/recipe, last modified Sun Sep 17 15:44:51 2017
+# ------------------------------------------------
+
+package:
+    name: pycparser
+    version: '2.18'
+source:
+    fn: pycparser-2.18.tar.gz
+    sha256: 99a8ca03e29851d96616ad0404b4aad7d9ee16f25c9f9708a11faf2810f7b226
+    url: https://pypi.io/packages/source/p/pycparser/pycparser-2.18.tar.gz
+build:
+    number: '1'
+    script: python setup.py install --single-version-externally-managed --record=record.txt
+    string: py27_1
+requirements:
+    host:
+        - ca-certificates 2018.03.07 0
+        - certifi 2018.4.16 py27_0
+        - libedit 3.1.20170329 h6b74fdf_2
+        - libffi 3.2.1 hd88cf55_4
+        - libgcc-ng 7.2.0 hdf63c60_3
+        - libstdcxx-ng 7.2.0 hdf63c60_3
+        - ncurses 6.1 hf484d3e_0
+        - openssl 1.0.2o h20670df_0
+        - python 2.7.15 h1571d57_0
+        - readline 7.0 ha6073c6_4
+        - setuptools 39.2.0 py27_0
+        - sqlite 3.24.0 h84994c4_0
+        - tk 8.6.7 hc745277_3
+        - zlib 1.2.11 ha838bed_2
+    run:
+        - python >=2.7,<2.8.0a0
+test:
+    imports:
+        - pycparser
+        - pycparser.ply
+about:
+    description: 'pycparser is a complete parser of the C language, written in pure
+        Python
+
+        using the PLY parsing library.  It parses C code into an AST and can serve
+
+        as a front-end for C compilers or analysis tools.
+
+        '
+    dev_url: https://github.com/eliben/pycparser
+    doc_source_url: https://github.com/eliben/pycparser
+    doc_url: https://pypi.python.org/pypi/pycparser
+    home: https://github.com/eliben/pycparser
+    license: BSD 3-clause
+    license_family: BSD
+    license_file: LICENSE
+    summary: Complete C99 parser in pure Python
+extra:
+    copy_test_source_files: true
+    final: true
+    recipe-maintainers:
+        - mingwandroid
+        - synapticarbors

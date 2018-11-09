@@ -1,0 +1,31 @@
+{
+  "arch": "x86_64", 
+  "build": "py27_1", 
+  "build_number": 1, 
+  "depends": [
+    "python >=2.7,<2.8.0a0"
+  ], 
+  "files": [
+    "lib/python2.7/site-packages/certifi-2018.08.24-py2.7.egg-info", 
+    "lib/python2.7/site-packages/certifi/__init__.py", 
+    "lib/python2.7/site-packages/certifi/__init__.pyc", 
+    "lib/python2.7/site-packages/certifi/__main__.py", 
+    "lib/python2.7/site-packages/certifi/__main__.pyc", 
+    "lib/python2.7/site-packages/certifi/cacert.pem", 
+    "lib/python2.7/site-packages/certifi/core.py", 
+    "lib/python2.7/site-packages/certifi/core.pyc"
+  ], 
+  "installed_by": "Miniconda2-4.5.11-Linux-x86_64.sh", 
+  "license": "ISC", 
+  "link": {
+    "source": "/home/mercadore2018/miniconda2/pkgs/certifi-2018.8.24-py27_1", 
+    "type": "hard-link"
+  }, 
+  "md5": "486a05419c4664b345f792f1ec203715", 
+  "name": "certifi", 
+  "platform": "linux", 
+  "subdir": "linux-64", 
+  "timestamp": 1535377823170, 
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/certifi-2018.8.24-py27_1.tar.bz2", 
+  "version": "2018.8.24"
+}
