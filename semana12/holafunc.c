@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "holamake.h"
+<<<<<<< HEAD
 #include<math.h>
 
 
@@ -23,6 +24,12 @@ x=sqrt(n);
 
 printf("La raiz cuadrada del numero deseado es: %f\n",x);
 
+=======
+
+void printholamake( ){
+
+printf("Hola makefile....!\n");
+>>>>>>> a7c3b37938983be9522c00be35561c0a23771bb1
 
 return ;
 }
